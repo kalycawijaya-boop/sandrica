@@ -1,0 +1,282 @@
+/* BODY & BACKGROUND */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+
+  /* Background HD Snoopy */
+  background-image: url("bg-about.png.jpeg"); /* pastikan nama file benar */
+  background-size: cover;     /* isi layar penuh */
+  background-position: center; /* fokus di tengah */
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-attachment: fixed; /* supaya scroll tetap smooth */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* sesuai tinggi navbar */
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255, 182, 193, 0.3); /* pink transparan */
+  pointer-events: none; /* overlay tidak mengganggu klik */
+  z-index: 0;
+}
+
+body::after {
+  content:"";
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(255,182,193,0.3);
+  pointer-events: none; /* penting supaya klik tombol tetap bisa */
+  z-index: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* NAVBAR */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+background:#ffb6c1;
+color:white;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
+
+/* MUSIC PLAYER */
+
+/* Container semua lagu */
+.music-container{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+/* Satu lagu */
+.song{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+/* Cover bulat */
+.cover{
+width:150px;
+height:150px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid pink;
+animation:spin 6s linear infinite;
+margin-bottom:10px;
+}
+
+/* Animasi spin */
+@keyframes spin{
+from{transform:rotate(0deg);}
+to{transform:rotate(360deg);}
+}
+
+/* Audio player */
+audio{
+margin-top:10px;
+}
+
+/* Nama artis di bawah audio */
+.song p{
+margin-top:5px;
+color:#ff1493;
+font-weight:600;
+}
+
+.music-container{
+display:flex;
+justify-content:center;
+margin-top:40px;
+}
+
+.song{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.cover{
+width:150px;
+height:150px;
+border-radius:50%;
+border:5px solid pink;
+animation:spin 6s linear infinite;
+}
+
+@keyframes spin{
+from{transform:rotate(0deg);}
+to{transform:rotate(360deg);}
+}
+
+audio{
+margin-top:10px;
+}
+
+/* Tombol menu & Back */
+.menu-btn,
+.back-btn{
+display:inline-block;
+padding:10px 25px;
+margin:10px;
+border-radius:25px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+border:2px solid #ff8fab;
+}
+
+.menu-btn{background:#ffb6c1;color:white;}
+.back-btn{background:#ffc0cb;color:white;}
+
+.menu-btn:hover,
+.back-btn:hover{
+background:#ff8fab;
+transform:scale(1.05);
+cursor:pointer;
+}
+
+/* FRAME SECTIONS */
+.frame-section{
+padding:40px 20px;
+text-align:center;
+}
+
+.frame-container{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+margin-top:20px;
+}
+
+.frame{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(255,105,180,0.3);
+transition:0.3s;
+text-align:center;
+}
+
+/* Hover effect frame */
+.frame:hover{
+transform:scale(1.05);
+box-shadow:0 8px 20px rgba(255,105,180,0.4);
+}
+
+/* FOTO-FOTO & MAKANAN */
+.foto-frame img,
+.food-frame img{
+width:150px;
+height:150px;
+border-radius:15px;
+object-fit:cover;
+}
+
+.foto-frame p{
+margin-top:10px;
+color:#ff1493;
+font-size:14px;
+}
+/* Semua frame */
+.frame{
+background: rgba(255, 255, 255, 0.7); /* putih bening */
+backdrop-filter: blur(5px); /* glassy effect */
+padding: 20px;
+border-radius: 20px;
+box-shadow: 0 5px 15px rgba(255,105,180,0.3); /* soft pink shadow */
+transition: 0.3s;
+text-align: center;
+}
+
+/* Hover efek frame */
+.frame:hover{
+transform: scale(1.05);
+box-shadow: 0 10px 25px rgba(255,105,180,0.5);
+}
+/* Foto di atas teks */
+.hobi-img{
+  width:150px;
+  height:150px;
+  border-radius:15px;
+  object-fit:cover;
+  margin-bottom:10px;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(255,105,180,0.3);
+}
+
+/* Hover efek foto */
+.hobi-img:hover{
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(255,105,180,0.5);
+}
+
+/* Frame white glass */
+.hobi-frame{
+  background: rgba(255,255,255,0.7); /* putih bening */
+  backdrop-filter: blur(5px);
+  padding:20px;
+  border-radius:20px;
+  box-shadow: 0 5px 15px rgba(255,105,180,0.3);
+  transition: 0.3s;
+  text-align:center;
+}
+
+.hobi-frame:hover{
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(255,105,180,0.5);
+}
+
+/* Foto makanan */
+.food-img{
+  width:150px;
+  height:150px;
+  border-radius:15px;
+  object-fit:cover;
+  transition:0.3s;
+  box-shadow:0 5px 15px rgba(255,105,180,0.3);
+}
+
+/* Hover efek makanan */
+.food-img:hover{
+  transform: scale(1.05);
+  box-shadow:0 10px 25px rgba(255,105,180,0.5);
+}
+
+/* Frame makanan glass effect */
+.food-frame{
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(5px);
+  padding:20px;
+  border-radius:20px;
+  transition:0.3s;
+}
+
+.food-frame:hover{
+  transform: scale(1.05);
+  box-shadow:0 10px 25px rgba(255,105,180,0.5);
+}
